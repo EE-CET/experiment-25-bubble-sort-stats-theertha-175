@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Example 1",
+      "setup": "javac src/BubbleSortStats.java",
+      "run": "java -cp src BubbleSortStats",
+      "input": "3\n6 4 1",
+      "output": "3\n1\n6",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Already Sorted (0 Swaps)",
+      "setup": "javac src/BubbleSortStats.java",
+      "run": "java -cp src BubbleSortStats",
+      "input": "4\n1 2 3 4",
+      "output": "0\n1\n4",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Reverse Sorted (Max Swaps)",
+      "setup": "javac src/BubbleSortStats.java",
+      "run": "java -cp src BubbleSortStats",
+      "input": "3\n3 2 1",
+      "output": "3\n1\n3",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Single Element",
+      "setup": "javac src/BubbleSortStats.java",
+      "run": "java -cp src BubbleSortStats",
+      "input": "1\n50",
+      "output": "0\n50\n50",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    }
+  ]
+}
