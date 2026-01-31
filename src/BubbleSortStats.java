@@ -1,11 +1,32 @@
+import java.util.Scanner;
+
 public class BubbleSortStats {
-    
-        // TODO: Read n
-        // TODO: Read the array elements
-        // TODO: Implement Bubble Sort
-        // TODO: Keep track of the number of swaps
-        // TODO: Print total swaps
-        // TODO: Print the first element of the sorted array
-        // TODO: Print the last element of the sorted array
-    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int swaps = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swaps++;
+                }
+            }
+        }
+
+        System.out.println(swaps);
+        System.out.println(arr[0]);
+        System.out.print(arr[n - 1]);
+
+        sc.close();
+    }
 }
